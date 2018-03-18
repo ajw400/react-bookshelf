@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import BookshelfChanger from './BookshelfChanger'
-// import serializeForm from 'form-serialize'
 
 class Collection extends Component {
   static propTypes = {

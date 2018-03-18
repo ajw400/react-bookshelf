@@ -4,7 +4,6 @@ This a bookshelf project was made as practice for the Udacity React Nanodegree.
 
 ## Setup
 
-* clone the Project - `git clone https://github.com/udacity/reactnd-contacts-complete.git`
 * install the dependencies - `npm install`
 * start the server - 'npm start'
 

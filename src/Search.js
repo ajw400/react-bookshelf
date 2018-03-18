@@ -23,7 +23,6 @@ class Search extends Component {
   render () {
     const { query, books } = this.state
     const { onUpdateShelf } = this.props
-
     return (
       <div className="search-books">
         <div className="search-books-bar">
