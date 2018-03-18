@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Shelf from './Shelf'
+import Shelf from './Shelf';
+import PropTypes from 'prop-types'
+
 // import serializeForm from 'form-serialize'
 
 
 
 class Bookshelf extends Component {
+  static propTypes = {
+    books: PropTypes.array.isRequired,
+    onUpdateShelf: PropTypes.func.isRequired,
+    shelves: PropTypes.array.isRequired
+  }
+
   render () {
-    const { shelves, books } = this.props
-    const { onUpdateShelf } = this.props
+    const { shelves, books, onUpdateShelf } = this.props
     function capitalizeFirstLetter(string) {
       return string[0].toUpperCase() + string.slice(1);
     }

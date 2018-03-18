@@ -29,13 +29,10 @@ class BooksApp extends React.Component {
   }
 
   updateShelf = (book, shelf) => {
-    var objIndex = this.state.books.findIndex((obj => obj.id === book.id));
-    var books_array = this.state.books;
-    books_array[objIndex].shelf = shelf;
+    book.shelf = shelf;
     this.setState((state) => ({
-      books: books_array
+      books: this.state.books.filter((b) => b.id !== book.id).concat([book])
     }));
-
     BooksAPI.update(book, shelf);
   }
 
@@ -51,7 +48,9 @@ class BooksApp extends React.Component {
           />
         )}/>
         <Route path='/search' render={() => (
-          <Search />
+          <Search
+            onUpdateShelf={this.updateShelf}
+          />
         )}/>
       </div>
       )

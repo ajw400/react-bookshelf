@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 class BookshelfChanger extends Component {
   render() {
     const { onUpdateShelf, book, shelf } = this.props
+
     return(
       <div className="book-shelf-changer">
         <select
-            value={book.shelf}
+            value={(book.shelf || 'none')}
             onChange={(event) => onUpdateShelf(book, event.target.value)}
         >
           <option value="none" disabled>Move to...</option>

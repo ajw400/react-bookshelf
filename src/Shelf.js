@@ -9,10 +9,12 @@ class Shelf extends Component {
     return (
       <div className="bookshelf" key={title}>
         <Header title={title}/>
-        <Collection
-          books={books}
-          onUpdateShelf={onUpdateShelf}
-       />
+        <div className="bookshelf-books">
+          <Collection
+            books={books}
+            onUpdateShelf={onUpdateShelf}
+         />
+        </div>
       </div>
       )
   }
